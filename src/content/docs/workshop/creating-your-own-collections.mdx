@@ -1,0 +1,96 @@
+---
+title: Creating IIIF Collections
+description: Learn how to create and manage IIIF Collections to group Manifests in a hierarchical structure for presentation, navigation, and organizing related resources.
+---
+
+# Creating IIIF Collection(s)
+
+You may want to create and manage IIIF Collections.
+
+Today, we will focus only on IIIF Manifests in the workshop, but if you want to look at how to create and manage Collections the following sections outline how you can do this in the workshop portal.
+
+As stated in the specification, a Collection is an
+
+> " ordered list of Manifests, and/or further Collections. Collections allow Manifests and child Collections to be grouped in a hierarchical structure for presentation, which can be for generating navigation, showing dynamic results from a search, or providing fixed sets of related resources for any other purpose."
+
+## Create new, empty collection
+
+Within the IIIF Publishing area, you can create a new IIIF Collection by clicking the 'New' option and then selecting Collection.
+
+![Create a new collection](https://digirati-workshop-iiif-2025.pages.dev/create-collection-step1.PNG)
+
+Give your collection a ‘Label’ to identify it, and add a brief ‘Summary’ to describe the contents of the collection. The ‘Slug’ will be automatically populated based on your label, it can be changed if required. This Slug determines the URL that your public Collection will be available at.
+
+Click ‘Create’ to generate the new Collection, you will then be navigated to the Collection view, where the empty collection will be displayed. Click the pencil icon, to edit the basic Collection metadata or delete the Collection.
+
+![Collection portal view](https://digirati-workshop-iiif-2025.pages.dev/create-collection-step2.png)
+
+## Add content to your Collection
+
+From this basic Collection view, you can select other existing IIIF content to add to your Collection. Click on the ‘Add items’ link, opens the “IIIF Browser”, where you can browse through and select items from your IIIF Publishing area. You can select multiple items to add within the current folder. Click Add to add the selected items.
+
+![Navigate to your spaces](https://digirati-workshop-iiif-2025.pages.dev/create-collection-step3.PNG)
+
+:::note
+You cannot add the Collection to itself; it will be disabled within the IIIF Browser modal. You can add any other Collection or Manifest, but you can only add it once; you cannot have duplicate items within a Collection.
+:::
+
+You can also choose to add an external Collection or Manifest directly to your Collection using this ‘Add items’ option. In the “IIIF Browser” paste the URL of an external Collection or Manifest into the address bar and click Add to add this item to your Collection.
+
+![Select external collection](https://digirati-workshop-iiif-2025.pages.dev/adding-external-collection-to-collection.png)
+
+Once added, your selected IIIF content should now appear within your Collection.
+
+![Your images added as canvases](https://digirati-workshop-iiif-2025.pages.dev/create-collection-step4.PNG)
+
+## View (and share) your Collection
+
+With IIIF content added to your Collection, you can now preview how your Collection would be displayed by a IIIF compliant viewer. In the Collection edit view, click on the ‘Open in viewer’ option, and select Theseus (or Mirador).
+
+This will open an instance of Theseus in a new browser tab, with your example collection. You can browse the contents of your Collection, seeing the basic metadata you added earlier and the IIIF content you have added.
+
+# Editing your collection
+
+The Collection Portal view allows you to edit the basic metadata for the Collection, add IIIF content and remove IIIF content from your Collection.
+
+For more advanced editing, use the 'Edit with Collection Editor' link.
+
+## Using the Collection Editor to update your Collection
+
+Click on the ‘Edit with Collection Editor’ link. This will navigate you to the Collection Editor tool, which provides you with full editorial access to edit your collection as needed.
+
+The default view in the Collection Editor presents the Collection summary in the left hand panel, with the detailed metadata information in the right hand panel, together with the IIIF Content that forms part of the collection listed in the central grid view.
+
+![Opening the collection in CE](https://digirati-workshop-iiif-2025.pages.dev/editing-collection-via-collectioneditor1.PNG)
+
+You can add metadata and other IIIF Collection properties and behaviours to the Collection using the right hand panel. To start, the first improvement we will make is to add a Thumbnail image to our Collection. Clicking 'Add Thumbnail' on the right hand side panel, and perhaps select an image that you have uploaded to your Spaces earlier using the 'Image Service' option.
+
+![Adding thumbnail to IIIF Collection](https://digirati-workshop-iiif-2025.pages.dev/editing-collection-via-collectioneditor2.PNG)
+
+Clicking on the ‘Collection items’ icon in the left hand panel, navigates you to the ‘Manifests and Collections’ view, with the first item in the Collection selected.
+
+![Viewing IIIF content in the IIIF Collection](https://digirati-workshop-iiif-2025.pages.dev/editing-collection-via-collectioneditor3.png)
+
+In this ‘Collection items’ view, the right hand panel displays summary information for the selected IIIF content. You can edit the basic metadata for the IIIF content within the collection. In the example below, the Summary metadata for the IIIF Manifest has been updated. Note this change only applies to the IIIF content in the context of that specific Collection; not the underlying IIIF content item.
+
+![Viewing IIIF content in the IIIF Collection](https://digirati-workshop-iiif-2025.pages.dev/editing-collection-via-collectioneditor4.PNG)
+
+We can then update the order of the IIIF Content within the Collection. To do this, click on the ‘pencil’ icon (‘Edit Items’) in the left hand panel top menu. Using the ‘=’ icon, you can drag the canvases into an appropriate order.
+
+![Edit IIIF content order](https://digirati-workshop-iiif-2025.pages.dev/editing-collection-via-collectioneditor5.png)
+
+With those changes in place, we can click ‘Save changes’ to save our work.
+
+Additional ordering options and the ‘Delete’ option are available from the three dots menu next to each item in the Collection.
+
+To add more content to your Collection, click on the IIIF Browser link to open the IIIF Browser, which will enable you to search for and add other internal (to your IIIF Publishing area) or externally hosted IIIF content.
+
+![Select the IIIF Browser to add content](https://digirati-workshop-iiif-2025.pages.dev/editing-collection-via-collectioneditor6.png)
+
+![Add selected content and save](https://digirati-workshop-iiif-2025.pages.dev/editing-collection-via-collectioneditor7.png)
+
+Once you have added your additional IIIF content, click on ‘Save changes’. You can then take a look at your work or share it using the ‘Open in viewer’ link.
+
+Note that IIIF compliant viewers offer varying support for IIIF Collections, the two configured viewers (Theseus and Mirador support navigation and viewing of content from the Collection).
+
+If you want to explore what support different viewers provide, the IIIF Cookbook provides a ‘Viewer Matrix’ where you can see what is available across 10 viewers listed. See https://iiif.io/api/cookbook/recipe/matrix/#viewer-matrix

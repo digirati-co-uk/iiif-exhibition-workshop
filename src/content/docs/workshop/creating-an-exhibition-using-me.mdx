@@ -1,0 +1,174 @@
+---
+title: Activity 3 - Creating an Exhibition Using Manifest Editor
+description: Learn how to use the Exhibition editor in the Manifest Editor to create and curate IIIF Manifests for presentation, including adding tour steps and annotations to create engaging digital exhibitions.
+---
+
+# Activity 3 - Creating an exhibition from your IIIF Manifest
+
+## Step 1 - Accessing the Exhibition editor
+
+The Exhibition editor is a separate workbench view within the Manifest Editor, to allow users to create and curate their Manifests for presentation. The toolset provided is more focussed to allow access to the necessary layout and behaviour properties to support the presentation. Easy access to annotate your IIIF content is also provided in this view.
+
+- From the Manifest Editor, when you are ready to access the Exhibition editing tools to work on the IIIF Manifest you've created, click on the 'Settings cog' in the bottom left hand menu.
+- This opens the Workspace configuration for the Manifest Editor.
+- Clicking the link 'Go to Exhibition Editor' will open your Manifest in the editor:
+
+![Accessing the Exhibition Viewer](/activity-3-step-1-accessing-the-exhibition-editor.png)
+
+## Step 2 - Introduction to the Exhibition editing mode
+
+![Open Manifest in the Exhibition Viewer](/activity-3-step-2-open-manifest-in-exhibition-editor.PNG)
+
+Your Manifest will open in the Exhibition Viewer as indicated in the screenshot above. The layout and structure is similar to the standard Manifest Editor view you have been using in the early activities. The Manifest and it's Metadata properties are presented in the same way.
+
+The main difference is how you interact with the Canvases in your Manifest, in this view.
+
+The left hand panel allows interaction with the individual “slides” (aka Canvases) that make up the exhibition. These are simply the canvases which are present in the IIIF Manifest you are editing.
+
+The centre grid view presents the contents of the IIIF Manifest, whilst the right hand panel presents the Manifest metadata.
+
+## Step 3 - Editing the exhibition
+
+Clicking the Exhibition Grid icon on the left navigation, opens the Exhibition grid view where you can see an outline of your exhibition.
+
+![Opening the Exhibition editing view](/activity-3-step-3-open-exhibition-editor-grid.png)
+
+There are a number of controls:
+
+- 'Grid view' which enables you to view the exhibition as a grid, essentially providing a "Preview" of the exhibition you are creating.
+- 'List view' you can toggle the 'Grid view' to display the slides in the exhibition as a list.
+- 'Edit slides' allows you to reorganise and update the order of the "slides" (aka Canvases) within the manifest. You can also remove "slides" from the manifest using the three dot menu.
+- 'Add a new slide' enables you to add IIIF content on a new slide (aka Canvas) to your exhibition manifest.
+
+When you click on a slide in the left hand panel (or via the centre grid view), the right hand panel presents additional exhibition specific metadata options for each slide.
+
+## Step 4 - Editing and updating your Exhibition manifest
+
+As we are working with a IIIF Manifest created in the Manifest Creation and Editing step, a number of exhibition specific settings will need to be applied. These settings will determine aspects of the layout and behaviour of the exhibition manifest when viewed in the standalone Exhibition Viewer a little later.
+
+When you click on a canvas, the right hand side metadata panel presents the 'Exhibition' tab, which contains an option to ‘Apply defaults’ which allows you to quickly select some basic layout options for the canvas based on the existing content:
+
+![Apply defaults to slide](/activity-3-step-4-exhibition-editor-apply-defaults.PNG)
+
+:::note
+These defaults may require adjustment, which we will discuss during the workshop but they are a useful starting point. We won't focus too much on the layout, since we want to look at how to add tour steps to annotate your selected IIIF content. See the section, "Further exhibition editor controls" to review the other layout options later.
+:::
+
+## Step 5 - Creating a Tour of your Exhibition manifest
+
+The 'Tour steps' tab allows further configuration of the interaction provided for each individual slide, when viewed in the Exhibition Viewer.
+
+Each tour step that is created is saved as an annotation, as demonstrated earlier in the presentation, these annotations can be viewed in other IIIF enabled viewers (which support display of annotation).
+
+:::note
+These are not required to be set unless you want to have additional behaviour applied for the current slide.
+:::
+
+![Option to add tour](/activity-3-step-5-exhibition-editor-add-tour-step.PNG)
+
+As you add your Tour steps, you can add a label and summary for each step, which will be displayed in the standalone Exhibition Viewer.
+
+- Click to "+Add new step"
+
+![Add a new step](/activity-3-step-6-exhibition-editor-add-tour-step.png)
+
+- This will load the region selector toolbar as indicated in the screenshot below. This allows you to create a region using one of the available options.
+
+![Region selector toolbar](/activity-3-step-7-exhibition-editor-add-tour-step.png)
+
+- You can click the "Pan and Zoom" button to allow you to zoom into the specific area of the content that you want to highlight.
+
+![Zoom to the specific location](/activity-3-step-8-exhibition-editor-pan-and-zoom.png)
+
+- Pan and zoom into the appropriate section
+
+![Zoom to the required location](/activity-3-step-9-exhibition-editor-pan-and-zoom-to-location.png)
+
+- Then use one of the region selection options to allow you to highlight the content you want to annotate. In the example below, the box selector is used.
+
+![Box selector](/activity-3-step-10-exhibition-editor-box-selector.png)
+
+- When you have positioned your selection, release the selection and click the option to 'Save', which saves the region that you have selected.
+
+![Save region](/activity-3-step-11-exhibition-editor-box-selector-save.png)
+
+- On saving your region, you can then edit the annotation for the tour step, simply click the pencil in the right hand menu as indicated below.
+
+![Edit annotation](/activity-3-step-12-exhibition-editor-edit-step-annotation.png)
+
+- This opens a text/html editor to allow you to edit the annotation which will be displayed for the selected region as a tour step. Add your content to the step. Use the option '+Add new step' which will allow you to then save your changes.
+
+![Edit annotation text](/activity-3-step-13-exhibition-editor-edit-step-annotation-with-add-to-allow-you-to-save.PNG)
+
+- Click Save changes
+
+![Edit annotation text](/activity-3-step-14-exhibition-editor-edit-step-annotation-save-changes.PNG)
+
+- You can now Preview your tour step in one of the Exhibition Viewer default configurations
+
+![Select Exhibition Viewer](/activity-3-step-15-exhibition-editor-select-exhibition-viewer-setting.png)
+
+- Select the 'Floating tour' option, which will open your Manifest in the Exhibition Viewer.
+
+![Open Exhibition Viewer](/activity-3-step-16-exhibition-viewer-open.PNG)
+
+- Use the Exhibition Viewer controls to view your tour.
+
+![Highlight Exhibition Viewer navigation](/activity-3-step-17-exhibition-viewer-navigation-controls.png)
+
+- You can continue to edit and update your exhibition manifest, and preview your changes as you make them.
+
+## Some example Exhibition examples using Leeds Medieval Manuscripts
+
+With thanks to N. Kıvılcım Yavuz, University of Leeds (one of the organisers of this conference), the two different examples below use her teaching and demonstration annotations. The IIIF Manifests have been curated using the Manifest Editor and the Exhibition editing tools.
+
+The first example has a single Medieval Manuscript page, with a series of annotations in the tour steps. Use the navigation icons or click the 'Play' button on the exhibition controls at the bottom of the page.
+
+![Single page exhibition example - floating](/activity-3-step-end-example-exhibition-1.PNG)
+
+Click to view the example [Exhibition: Illuminations in Leeds, BC MS 100](https://exhibitionviewer.org/preview/presentation?manifest=https://presentation-api.dlcs-trial.digirati.io/176/leeds-imc/illuminations-in-leeds-bc-ms-100&minimal=true&floating=true)
+
+The second example focusses on the same Medieval Manuscript, but it contains a number of pages from the manuscript with a series of annotations in the tour steps. Use the navigation icons or click the 'Play' button on the exhibition controls at the bottom of the page.
+
+![Multiple page exhibition example - minimal](/activity-3-step-end-example-exhibition-2.PNG)
+
+Click to view the example [Exhibition: Elements of Mise-en-Page in Leeds, BC MS 100](https://exhibitionviewer.org/preview/presentation?manifest=https://presentation-api.dlcs-trial.digirati.io/176/leeds-imc/exhibition-elements-of-mise-en-page-in-leeds-bc-ms-100&minimal=true)
+
+## Further exhibition editor controls
+
+We may not have time to explore these controls during our short workshop, but you can return and review these options to enhance your initial exhibition
+
+When you select the 'Apply defaults' option for your exhibition slides (Canvases) this applys some basic settings to the slide content which determines how it is presented in the Exhibition Viewer.
+
+When you navigate to the ‘Layout’ tab, you’ll notice what has been applied:
+
+![Default layout applied](https://digirati-workshops.pages.dev/exhibition-editing-canvas-controls-step3.PNG)
+
+### Aspect ratio
+
+This will indicate a warning if applicable. You can use the ‘Size’ option to adjust the image appropriately and assess how well your changes apply to your selected content.
+
+As you alter the size, you’ll see how the changes impact the exhibition layout in the left hand exhibition grid:
+
+![Adjusted size, aspect ratio](https://digirati-workshops.pages.dev/exhibition-editing-canvas-controls-step4.PNG)
+
+### Behaviours
+
+There are a number of layout behaviours that are available which can be applied to your slides:
+
+- Text on left
+- Text on right
+- Text on bottom
+- Only image
+
+These determine how to present the slide (Canvas) Summary information presented on the ‘Summary’ tab in the right hand panel, when viewing the exhibition manifest in the standalone Exhibition Viewer.
+
+In the example below, ‘Text on left’ is selected which will result in the Label and Summary text being presented in a text component next to the image within the Exhibition Viewer. The effect of this change can be partially previewed in the Grid view in the left hand panel:
+
+![Text on left](https://digirati-workshops.pages.dev/exhibition-editing-canvas-controls-step5.PNG)
+
+### Summary
+
+The 'Summary' tab presents the existing (Canvas) Label and Summary values if added for the current slide. This information can be presented as part of the exhibition, using the behaviour controls mentioned in the previous section.
+
+These values can be edited and updated as needed.
