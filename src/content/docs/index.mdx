@@ -1,37 +1,35 @@
 ---
-title: IIIF Exhibition Building
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: IIIF Exhibition-Building Workshop
+description: A hands-on workshop for exploring IIIF and building small online exhibitions.
+template: splash
 ---
-
-<div className="flex flex-col justify-center items-center gap-6">
-  {/*<img src="/IMC2025postcard-scaled.jpg" alt="IMC 2025" />*/}
-  <img src="/digirati-logo.png" alt="Digirati" />
-</div>
 
 import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
 
+<div className="flex flex-col justify-center items-center gap-6">
+  <img src="/iiiflogo.png" alt="IIIF" className="max-w-[120px]" />
+</div>
 
-<LinkCard title="View documentation" href="/workshop" />
+Welcome! This site contains the materials for an upcoming online IIIF workshop.
 
+If you’re joining the online workshop today, start here:
 
-## Next steps
+<LinkCard title="Start the workshop" description="Workshop overview and agenda" href="/workshop/" />
 
+<CardGrid>
+  <Card title="Before you arrive" icon="check-circle">
+    Make sure you can access the tools we’ll use and have the basics installed.
 
-<CardGrid stagger>
-  <Card title="Update content" icon="pencil">
-    Edit `src/content/docs/index.mdx` to see this page change.
+    <a href="/workshop/what-you-will-need-for-workshop/">What you’ll need</a>
   </Card>
-  <Card title="Change page layout" icon="document">
-    Delete `template: splash` in `src/content/docs/index.mdx` to display a sidebar on this page.
+  <Card title="Day 1" icon="calendar">
+    Introduction, examples, and the first hands-on activities.
+
+    <a href="/workshop/day-1-workshop-overview/">Day 1 overview</a>
   </Card>
-  <Card title="Add new content" icon="add-document">
-    Add Markdown or MDX files to `src/content/docs` to create new pages.
-  </Card>
-  <Card title="Configure your site" icon="setting">
-    Edit your `sidebar` and other config in `astro.config.mjs`.
-  </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
+  <Card title="Getting started" icon="rocket">
+    Jump straight into the practical steps.
+
+    <a href="/workshop/getting-started/">Getting started</a>
   </Card>
 </CardGrid>
