@@ -19,7 +19,7 @@ export default defineConfig({
     },
   },
     integrations: [starlight({
-  title: 'IIIF Exhibition Building Workshop 2026',
+  title: 'IIIF Exhibition-Building Workshop',
   plugins: [
     starlightThemeNova(/* options */),
   ],
