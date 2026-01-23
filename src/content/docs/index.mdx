@@ -1,37 +1,102 @@
 ---
-title: IIIF Exhibition Building
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: IIIF Exhibition-Building Workshop
+description: A hands-on workshop for exploring IIIF and building small online exhibitions.
+template: splash
 ---
-
-<div className="flex flex-col justify-center items-center gap-6">
-  {/*<img src="/IMC2025postcard-scaled.jpg" alt="IMC 2025" />*/}
-  <img src="/digirati-logo.png" alt="Digirati" />
-</div>
 
 import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
 
+<div className="flex flex-col justify-center items-center gap-4">
+  <img src="/iiiflogo.png" alt="IIIF" className="max-w-[120px]" />
+  <p className="text-center max-w-[52ch]">
+    Learn the basics of IIIF, explore real-world examples, and use open tools to create and share your
+    own manifests and small online exhibitions.
+  </p>
+  <div className="scale-125 m-4">
+    <LinkCard title="Start here" description="Workshop overview and agenda" href="/workshop/" />
+  </div>
+</div>
 
-<LinkCard title="View documentation" href="/workshop" />
+<section className="w-full max-w-none my-8">
+  <div className="mx-auto max-w-screen-lg px-0">
+    <h2 className="text-2xl font-bold mb-4">Workshop Agenda</h2>
 
+    <div className="mb-4">
+      <h3 className="text-xl font-semibold">Plenary I (20m)</h3>
+      <ul className="list-disc pl-5">
+        <li>TU Delft introduction use cases and inspiration (10m)</li>
+        <li>Digirati introduction Manifest Editor (10m)</li>
+      </ul>
+    </div>
 
-## Next steps
+    <div className="mb-4">
+      <h3 className="text-xl font-semibold">Breakout I: Bring and edit content together from different places (20m)</h3>
+    </div>
 
+    <div className="mb-4">
+      <h3 className="text-xl font-semibold">Plenary II (20m)</h3>
+      <ul className="list-disc pl-5">
+        <li>Feedback from breakout rooms (10m)</li>
+        <li>Introduction Exhibition mode (10m)</li>
+      </ul>
+    </div>
 
-<CardGrid stagger>
-  <Card title="Update content" icon="pencil">
-    Edit `src/content/docs/index.mdx` to see this page change.
+    <div className="mb-4">
+      <h3 className="text-xl font-semibold">Breakout II: Create and preview an exhibition (20m)</h3>
+    </div>
+
+    <div className="mb-4">
+      <h3 className="text-xl font-semibold">Plenary III (30m)</h3>
+      <ul className="list-disc pl-5">
+        <li>Present selected results from breakout rooms (20m)</li>
+        <li>Q&A and wrap up (10m)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<CardGrid>
+  <Card title="Before you start" icon="check-circle">
+    Checklist of what you’ll need installed or available.
+
+    <a href="/workshop/what-you-will-need-for-workshop/">What you’ll need</a>
   </Card>
-  <Card title="Change page layout" icon="document">
-    Delete `template: splash` in `src/content/docs/index.mdx` to display a sidebar on this page.
+  <Card title="Introduction" icon="book-open">
+    A short primer to get you oriented in IIIF.
+
+    <a href="/workshop/brief-introduction-to-iiif/">Brief introduction to IIIF</a>
   </Card>
-  <Card title="Add new content" icon="add-document">
-    Add Markdown or MDX files to `src/content/docs` to create new pages.
+  <Card title="Workshop flow" icon="calendar">
+    A suggested walkthrough order for the session.
+
+    <a href="/workshop/day-1-workshop-overview/">Session overview</a>
   </Card>
-  <Card title="Configure your site" icon="setting">
-    Edit your `sidebar` and other config in `astro.config.mjs`.
+  <Card title="Hands-on" icon="rocket">
+    Jump straight into the practical steps.
+
+    <a href="/workshop/getting-started/">Getting started</a>
   </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
+</CardGrid>
+
+<CardGrid>
+  <Card title="Explore examples" icon="search">
+    Find IIIF manifests and services to try.
+
+    <a href="/workshop/examples-of-iiif-to-explore/">Examples of IIIF to explore</a>
+  </Card>
+  <Card title="Create and publish" icon="add-document">
+    Create your own manifests and collections.
+
+    <a href="/workshop/creating-your-own-manifests/">Creating IIIF Manifests</a>
+  </Card>
+  <Card title="Build an exhibition" icon="image">
+    Curate a manifest into a small exhibition.
+
+    <a href="/workshop/creating-an-exhibition-using-me/">Build an exhibition</a>
+  </Card>
+  <Card title="Wrap up" icon="arrow-right">
+    Where to go next after the workshop.
+
+    <a href="/workshop/next-steps/">Next steps</a>
   </Card>
 </CardGrid>
