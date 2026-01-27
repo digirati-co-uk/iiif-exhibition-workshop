@@ -1,0 +1,361 @@
+---
+title: Exhibition behaviour reference
+# sidebar:
+#   hidden: true
+---
+
+This page describes the IIIF `behavior` values supported on Canvas resources within the Exhibition Viewer. Behaviors allow you to control how canvases are displayed across different viewer variations available in the Manifest Editor preview options. You can add custom behaviours at the bottom of the layout panel. The buttons above the panel simply change which behaviours (as detailed here) are applied.
+
+## Viewer Variations
+
+The Exhibition Viewer supports three main variations:
+
+| Variation | Component | Description |
+|-----------|-----------|-------------|
+| **Delft Exhibition** | `DelftExhibition` | Grid-based layout with scrollable content blocks. Supports a presentation mode dialog. |
+| **Scroll Exhibition** | `ScrollExhibition` | Full-screen, immersive scrolling experience with sticky images and floating/split text overlays. |
+| **Delft Slideshow** | `DelftSlideshow` | Carousel-based presentation with manual navigation controls. |
+| **Presentation Mode** | `DelftPresentation` | Full-screen presentation mode (launched from Delft Exhibition). |
+
+
+
+## Support Matrix
+
+| Behavior | Delft Exhibition | Scroll Exhibition | Delft Slideshow | Presentation Mode |
+|----------|------------------|-------------------|-----------------|-------------------|
+| **Grid Sizing** |||||
+| `h-1` to `h-12` | ✅ | ❌ | ❌ | ❌ |
+| `w-1` to `w-12` | ✅ | ❌ | ❌ | ❌ |
+| `start-1` to `start-9` | ✅ | ❌ | ❌ | ❌ |
+| **Text Position** |||||
+| `left` | ✅ | ✅ | ❌ | ✅ |
+| `right` | ✅ | ✅ | ❌ | ✅ |
+| `top` | ✅ | ❌ | ❌ | ✅ |
+| `bottom` | ✅ | ❌ | ❌ | ✅ |
+| **Floating Panels** |||||
+| `floating` | ❌ | ✅ | ❌ | ✅ |
+| `float-top-left` | ❌ | ✅ | ❌ | ✅ |
+| `float-top-right` | ❌ | ✅ | ❌ | ✅ |
+| `float-bottom-left` | ❌ | ✅ | ❌ | ✅ |
+| `float-bottom-right` | ❌ | ✅ | ❌ | ✅ |
+| **Overlay Appearance** |||||
+| `backdrop-light` | ❌ | ✅ | ❌ | ❌ |
+| `backdrop-dark` | ❌ | ✅ | ❌ | ❌ |
+| **Image Display** |||||
+| `cover` / `image-cover` | ✅ | ✅ | ✅ | ❌ |
+| **Special** |||||
+| `page-scroll` | ❌ | ✅ | ❌ | ❌ |
+
+**Legend:**
+- ✅ Fully supported
+- ❌ Not supported / not applicable
+- 🔶 Partially implemented or reserved
+
+
+## Behavior Reference
+
+### Grid Sizing Behaviors
+
+Control the size and position of canvas blocks within the grid layout.
+
+#### Height (`h-1` through `h-12`)
+
+Sets the minimum height and row span of a canvas block.
+
+| Behavior | Height | Row Span |
+|----------|--------|----------|
+| `h-1` | 100px | 1 |
+| `h-2` | 200px | 2 |
+| `h-3` | 300px | 3 |
+| `h-4` | 400px | 4 |
+| `h-5` | 500px | 5 |
+| `h-6` | 600px | 6 |
+| `h-7` | 700px | 7 |
+| `h-8` | 800px | 8 |
+| `h-9` | 900px | 9 |
+| `h-10` | 1000px | 10 |
+| `h-11` | 1100px | 11 |
+| `h-12` | 1200px | 12 |
+
+**Default:** `h-6` (600px minimum height, 6 row span)
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Fully supported |
+| Scroll Exhibition | ❌ | Full-screen sections, height is viewport-based |
+| Delft Slideshow | ❌ | Fixed viewport size |
+| Presentation Mode | ❌ | Fixed viewport size |
+
+---
+
+#### Width (`w-1` through `w-12`)
+
+Sets the column span of a canvas block (based on a 12-column grid).
+
+| Behavior | Columns |
+|----------|---------|
+| `w-1` | 1/12 |
+| `w-2` | 2/12 |
+| `w-3` | 3/12 (25%) |
+| `w-4` | 4/12 (33%) |
+| `w-5` | 5/12 |
+| `w-6` | 6/12 (50%) |
+| `w-7` | 7/12 |
+| `w-8` | 8/12 (66%) |
+| `w-9` | 9/12 (75%) |
+| `w-10` | 10/12 |
+| `w-11` | 11/12 |
+| `w-12` | 12/12 (100%) |
+
+**Default:** `w-12` (full width)
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Fully supported |
+| Scroll Exhibition | ❌ | Full-width sections only |
+| Delft Slideshow | ❌ | Full-width slides |
+| Presentation Mode | ❌ | Full viewport |
+
+---
+
+#### Start Column (`start-1` through `start-9`)
+
+Sets the starting column position for a canvas block.
+
+| Behavior | Starting Column |
+|----------|-----------------|
+| `start-1` | Column 1 |
+| `start-2` | Column 2 |
+| `start-3` | Column 3 |
+| `start-4` | Column 4 |
+| `start-5` | Column 5 |
+| `start-6` | Column 6 |
+| `start-7` | Column 7 |
+| `start-8` | Column 8 |
+| `start-9` | Column 9 |
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Allows offset positioning in grid |
+| Scroll Exhibition | ❌ | Full-width sections only |
+| Delft Slideshow | ❌ | Not applicable |
+| Presentation Mode | ❌ | Not applicable |
+
+---
+
+### Text Panel Position Behaviors
+
+Control where the text/summary panel appears relative to the image.
+
+#### `left`
+
+Places the text panel on the left side of the image.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Text panel appears left of image |
+| Scroll Exhibition | ✅ | Triggers split layout mode with text on left |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Text panel appears left of image |
+
+---
+
+#### `right`
+
+Places the text panel on the right side of the image.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Text panel appears right of image |
+| Scroll Exhibition | ✅ | Triggers split layout mode with text on right |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Text panel appears right of image |
+
+---
+
+#### `top`
+
+Places the text panel above the image.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Text panel appears above image |
+| Scroll Exhibition | ❌ | Not currently supported |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Text panel appears above image |
+
+---
+
+#### `bottom`
+
+Places the text panel below the image.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Text panel appears below image |
+| Scroll Exhibition | ❌ | Not currently supported |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Text panel appears below image |
+
+---
+
+### Floating Panel Behaviors
+
+Control floating overlay panels for text content.
+
+#### `floating`
+
+Enables floating panel mode for text overlays.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Uses fixed grid layout |
+| Scroll Exhibition | ✅ | Text panel floats over the image |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Text panel floats over the image |
+
+---
+
+#### `float-top-left`
+
+Positions the floating panel in the top-left corner.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Not applicable |
+| Scroll Exhibition | ✅ | Panel floats top-left |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Panel floats top-left |
+
+---
+
+#### `float-top-right`
+
+Positions the floating panel in the top-right corner.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Not applicable |
+| Scroll Exhibition | ✅ | Panel floats top-right |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Panel floats top-right |
+
+---
+
+#### `float-bottom-left`
+
+Positions the floating panel in the bottom-left corner.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Not applicable |
+| Scroll Exhibition | ✅ | Panel floats bottom-left (default) |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Panel floats bottom-left |
+
+---
+
+#### `float-bottom-right`
+
+Positions the floating panel in the bottom-right corner.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Not applicable |
+| Scroll Exhibition | ✅ | Panel floats bottom-right |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ✅ | Panel floats bottom-right |
+
+---
+
+### Overlay Appearance Behaviors
+
+Control the visual appearance of text overlays.
+
+#### `backdrop-light`
+
+Applies a light (white) semi-transparent background to text overlays.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Uses themed colors |
+| Scroll Exhibition | ✅ | White overlay with dark text |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ❌ | Uses themed colors |
+
+---
+
+#### `backdrop-dark`
+
+Applies a dark (black) semi-transparent background to text overlays.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Uses themed colors |
+| Scroll Exhibition | ✅ | Black overlay with white text (default) |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ❌ | Uses themed colors |
+
+---
+
+### Image Display Behaviors
+
+Control how images are rendered within their containers.
+
+#### `cover` / `image-cover`
+
+Forces the image to cover its entire container (using `object-fit: cover`).
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ✅ | Image covers container, may crop |
+| Scroll Exhibition | ✅ | Always covers by default |
+| Delft Slideshow | ✅ | Image covers container |
+| Presentation Mode | ❌ | Uses contain fit for full image visibility |
+
+---
+
+### Special Behaviors
+
+#### `page-scroll`
+
+Reserved for page-scroll mode functionality.
+
+**Support:**
+
+| Variation | Supported | Notes |
+|-----------|-----------|-------|
+| Delft Exhibition | ❌ | Not implemented |
+| Scroll Exhibition | ✅ | Applied by default for canvases with tours |
+| Delft Slideshow | ❌ | Not implemented |
+| Presentation Mode | ❌ | Not implemented |
